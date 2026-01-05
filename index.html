@@ -15,7 +15,6 @@
       --line:#232733;
       --accent:#7aa2ff;
       --accent2:#7cffc9;
-      --warn:#ffcc66;
       --shadow: 0 12px 30px rgba(0,0,0,.35);
       --radius: 16px;
       --max: 1100px;
@@ -197,8 +196,8 @@
     <footer>
       <div><strong>追加のしかた：</strong>このファイル内の <span class="kbd">quotes</span> 配列に1件追加するだけ。</div>
       <div style="margin-top:8px;">
-        <strong>著作権の注意：</strong>古典の原文は多くがパブリックドメインでも、<em>日本語訳（翻訳文）</em>は近年のものだと著作権がある場合があります。
-        このサイトに載せるなら「自分で意訳する」「パブリックドメインの訳を使う」「権利者の許諾を取る」が安全です。
+        <strong>注意：</strong>日本語訳（翻訳文）をそのまま転載すると著作権が絡む場合があります。
+        安全にやるなら「自分で意訳する」or「パブリックドメインの訳を使う」がおすすめ。
       </div>
       <div style="margin-top:8px;">ショートカット：<span class="kbd">/</span> で検索欄へ</div>
     </footer>
@@ -208,11 +207,12 @@
 
   <script>
     // ===== 名言データ（ここを増やす）=====
-    // note: 日本語は意訳（著作権リスクを避けるため）。必要なら原文（英語/ラテン語等）も併記推奨。
+    // 日本語は基本「意訳」寄りで収録しています。
     const quotes = [
+      // ---- 既存（10件） ----
       {
         id: "socrates-001",
-        author: "ソクラテス",
+        author: "ソクラテス（プラトン）",
         era: "古代",
         tags: ["自己省察", "生き方"],
         text: "吟味しない人生は、十分に生きたとは言えない。",
@@ -233,18 +233,18 @@
         author: "アリストテレス",
         era: "古代",
         tags: ["徳", "習慣", "生き方"],
-        text: "私たちは、繰り返し行うことの総体だ。だから卓越は行為の習慣に宿る。",
-        original: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-        source: "（広く流布する要約表現。原典は『ニコマコス倫理学』の徳と習慣の議論）",
+        text: "卓越は一度の行為ではなく、習慣に宿る。",
+        original: "",
+        source: "『ニコマコス倫理学』の徳と習慣の趣旨",
       },
       {
         id: "descartes-001",
         author: "デカルト",
         era: "近代",
         tags: ["知", "懐疑"],
-        text: "疑うことができるなら、考えている。考えているなら、私がいる。",
+        text: "疑うなら考えている。考えているなら、私はいる。",
         original: "Cogito, ergo sum.",
-        source: "『省察』(Meditations) / 『方法序説』",
+        source: "『省察』/『方法序説』",
       },
       {
         id: "kant-001",
@@ -271,7 +271,7 @@
         tags: ["逆境", "生き方"],
         text: "自分を壊さない苦しみは、かえって自分を強くすることがある。",
         original: "That which does not kill us makes us stronger.",
-        source: "『偶像の黄昏』(Twilight of the Idols)",
+        source: "『偶像の黄昏』",
       },
       {
         id: "marcus-001",
@@ -280,7 +280,7 @@
         tags: ["ストア", "心"],
         text: "あなたを乱すのは出来事ではなく、出来事への捉え方だ。",
         original: "",
-        source: "『自省録』の趣旨（ストア派的要点）",
+        source: "『自省録』の趣旨（ストア派の要点）",
       },
       {
         id: "confucius-001",
@@ -297,8 +297,190 @@
         era: "現代",
         tags: ["言語", "限界"],
         text: "言葉の届く範囲が、世界の見え方の範囲になる。",
-        original: "The limits of my language mean the limits of my world.",
-        source: "『論理哲学論考』(Tractatus)",
+        original: "",
+        source: "『論理哲学論考』の趣旨",
+      },
+
+      // ---- 追加（20件） ----
+      {
+        id: "epictetus-001",
+        author: "エピクテトス",
+        era: "古代",
+        tags: ["ストア", "心", "受容"],
+        text: "乱れるのは出来事そのものではなく、それをどう見るかだ。",
+        original: "",
+        source: "『要録（エンケイリディオン）』の趣旨",
+      },
+      {
+        id: "seneca-001",
+        author: "セネカ",
+        era: "古代",
+        tags: ["時間", "生き方"],
+        text: "人生が短いのではない。私たちが浪費しているのだ。",
+        original: "",
+        source: "『人生の短さについて』の趣旨",
+      },
+      {
+        id: "epicurus-001",
+        author: "エピクロス",
+        era: "古代",
+        tags: ["幸福", "快楽", "不安"],
+        text: "幸福は、派手な快楽ではなく、心の静けさに近い。",
+        original: "",
+        source: "エピクロス派のアタラクシア（心の平静）の趣旨",
+      },
+      {
+        id: "laozi-001",
+        author: "老子",
+        era: "古代",
+        tags: ["道", "柔軟", "生き方"],
+        text: "柔らかいものが、固いものに勝つことがある。",
+        original: "",
+        source: "『道徳経』の趣旨",
+      },
+      {
+        id: "spinoza-001",
+        author: "スピノザ",
+        era: "近代",
+        tags: ["自由", "生", "知恵"],
+        text: "自由な人は、死よりも生を考える。",
+        original: "",
+        source: "『エチカ』の趣旨",
+      },
+      {
+        id: "locke-001",
+        author: "ロック",
+        era: "近代",
+        tags: ["自由", "政治", "権利"],
+        text: "権力は信託であり、目的は人々の安全と自由だ。",
+        original: "",
+        source: "『統治二論』の趣旨",
+      },
+      {
+        id: "rousseau-001",
+        author: "ルソー",
+        era: "近代",
+        tags: ["社会", "自由", "政治"],
+        text: "人は自由に生まれるが、いたるところで鎖につながれている。",
+        original: "",
+        source: "『社会契約論』の有名な冒頭（要旨）",
+      },
+      {
+        id: "hobbes-001",
+        author: "ホッブズ",
+        era: "近代",
+        tags: ["国家", "社会", "秩序"],
+        text: "秩序がない状態では、生活は不安定で苛烈になりやすい。",
+        original: "",
+        source: "『リヴァイアサン』の自然状態の議論（趣旨）",
+      },
+      {
+        id: "pascal-001",
+        author: "パスカル",
+        era: "近代",
+        tags: ["人間", "思考", "弱さ"],
+        text: "人は弱い。しかし、考えるという強さがある。",
+        original: "",
+        source: "『パンセ』の趣旨（考える葦）",
+      },
+      {
+        id: "bacon-001",
+        author: "フランシス・ベーコン",
+        era: "近代",
+        tags: ["知", "実用", "科学"],
+        text: "知は力になりうる。",
+        original: "",
+        source: "ベーコンに帰される有名な要旨",
+      },
+      {
+        id: "mill-001",
+        author: "J.S.ミル",
+        era: "近代",
+        tags: ["自由", "幸福", "個人"],
+        text: "満足した豚であるより、不満足な人間であるほうがよい。",
+        original: "",
+        source: "『功利主義論』の有名な趣旨",
+      },
+      {
+        id: "kierkegaard-001",
+        author: "キルケゴール",
+        era: "近代",
+        tags: ["人生", "選択", "時間"],
+        text: "人生は後ろ向きに理解されるが、前向きに生きられる。",
+        original: "",
+        source: "キルケゴールに帰される有名な趣旨",
+      },
+      {
+        id: "schopenhauer-001",
+        author: "ショーペンハウアー",
+        era: "近代",
+        tags: ["幸福", "欲望", "苦しみ"],
+        text: "欲望は満たしてもまた生まれる。だから苦しみも続きやすい。",
+        original: "",
+        source: "『意志と表象としての世界』の趣旨",
+      },
+      {
+        id: "sartre-001",
+        author: "サルトル",
+        era: "現代",
+        tags: ["自由", "責任", "実存"],
+        text: "人は自分の選択に責任を負う自由を背負っている。",
+        original: "",
+        source: "実存主義の議論（趣旨）",
+      },
+      {
+        id: "beauvoir-001",
+        author: "シモーヌ・ド・ボーヴォワール",
+        era: "現代",
+        tags: ["自由", "社会", "ジェンダー"],
+        text: "人は“そうされる”ことで形づくられる面がある。",
+        original: "",
+        source: "『第二の性』の議論（趣旨）",
+      },
+      {
+        id: "camus-001",
+        author: "カミュ",
+        era: "現代",
+        tags: ["不条理", "生き方"],
+        text: "不条理を見据えても、なお生きる態度を選べる。",
+        original: "",
+        source: "『シーシュポスの神話』の趣旨",
+      },
+      {
+        id: "arendt-001",
+        author: "ハンナ・アーレント",
+        era: "現代",
+        tags: ["思考", "政治", "責任"],
+        text: "考えることをやめると、判断も鈍る。",
+        original: "",
+        source: "アーレントの思考と判断の議論（趣旨）",
+      },
+      {
+        id: "popper-001",
+        author: "カール・ポパー",
+        era: "現代",
+        tags: ["科学", "批判", "知"],
+        text: "反証に耐える形でこそ、主張は強くなる。",
+        original: "",
+        source: "反証可能性の議論（趣旨）",
+      },
+      {
+        id: "rawls-001",
+        author: "ジョン・ロールズ",
+        era: "現代",
+        tags: ["正義", "社会", "公平"],
+        text: "公正さを前提に、社会のルールを設計する。",
+        original: "",
+        source: "『正義論』の趣旨（公正としての正義）",
+      },
+      {
+        id: "foucault-001",
+        author: "フーコー",
+        era: "現代",
+        tags: ["権力", "社会", "知"],
+        text: "権力は目に見える命令だけでなく、日常の仕組みにも宿る。",
+        original: "",
+        source: "権力論の議論（趣旨）",
       },
     ];
 
@@ -387,11 +569,10 @@
 
       elList.innerHTML = filtered.map(item => cardHtml(item)).join("");
 
-      // カード内ボタンにイベント付与
       filtered.forEach(item => {
         document.getElementById(`copy-${item.id}`)?.addEventListener("click", () => copyQuote(item));
         document.getElementById(`fav-${item.id}`)?.addEventListener("click", () => toggleFav(item.id));
-        document.getElementById(`rand-${item.id}`)?.addEventListener("click", () => focusQuote(item.id));
+        document.getElementById(`jump-${item.id}`)?.addEventListener("click", () => focusQuote(item.id));
       });
 
       if (filtered.length === 0){
@@ -430,7 +611,7 @@
           <div class="row">
             <div class="mini">
               <button id="copy-${escapeHtml(item.id)}">コピー</button>
-              <button class="ghost" id="rand-${escapeHtml(item.id)}" title="このカードへ移動">カードへ</button>
+              <button class="ghost" id="jump-${escapeHtml(item.id)}" title="このカードへ移動">カードへ</button>
             </div>
             <div class="meta">
               <span style="font-family:var(--mono);font-size:12px;">id: ${escapeHtml(item.id)}</span>
@@ -468,13 +649,11 @@
 — ${item.author}
 ${item.original ? "Original: " + item.original + "\n" : ""}${item.source ? "Source: " + item.source : ""}`.trim();
 
-      // Clipboard API（https/localhostが基本）。file:// の場合は失敗することがあるのでフォールバック付き。
       try{
         await navigator.clipboard.writeText(text);
         toast("コピーしました");
         return;
       }catch(e){
-        // fallback: textarea
         const ta = document.createElement("textarea");
         ta.value = text;
         ta.style.position = "fixed";
